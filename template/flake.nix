@@ -22,7 +22,13 @@
         ];
 
         shellHook = ''
-          echo "$(python --version)"
+              echo "$(python --version)"
+              # если есть fish
+            if [ -n "$FISH_VERSION" ]; then
+              fish
+          else if [ -n "$BASH_VERSION" ]; then
+                bash
+            fi
         '';
       };
     });
