@@ -2,7 +2,7 @@
   description = "Neovim flake with Codeberg dotfiles and devShell";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     flake-utils.url = "github:numtide/flake-utils";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,12 +38,11 @@
             programs.neovim = {
               enable = true;
               defaultEditor = true;
-              # Не используем initLua - конфиг будет в ~/.config/nvim
             };
 
             # Симлинк всей директории nvim
             xdg.configFile."nvim" = {
-              source = "${myDotfiles}/light_nvim";
+              source = "${myDotfiles}/nvim";
               recursive = true; # Копирует всю структуру
               force = true; # Перезаписывает существующие файлы
             };
