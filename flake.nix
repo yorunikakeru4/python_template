@@ -3,45 +3,45 @@
 
   outputs = {self}: {
     templates = {
-      python_template = {
+      python = {
         path = ./python;
         description = "Python dev shell";
       };
 
-      go_template = {
+      go = {
         path = ./go;
         description = "Go dev shell";
       };
 
-      rust_template = {
+      rust = {
         path = ./rust;
         description = "Rust dev shell";
       };
 
-      elixir_template = {
+      elixir = {
         path = ./elixir;
         description = "Elixir dev shell";
       };
 
-      lua_template = {
+      lua = {
         path = ./lua;
         description = "Lua dev shell";
       };
 
-      php_template = {
+      php = {
         path = ./php;
         description = "PHP dev shell";
       };
 
-      js_template = {
+      js = {
         path = ./js;
         description = "JavaScript dev shell";
       };
-      nvim_template = {
+      nvim = {
         path = ./nvim;
         description = "Neovim dev shell";
       };
-      base_template = {
+      base = {
         path = ./base;
         description = "Base dev shell";
       };
