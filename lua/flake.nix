@@ -22,7 +22,7 @@
         ];
 
         shellHook = ''
-          echo "$(lua --version)"
+          echo "$(lua -v)"
 
         '';
       };
